@@ -116,3 +116,11 @@
 #project3-img{
     cursor:pointer;
 }
+
+.project1-text{
+    padding-top: 20%;
+}
+.project1-links div{
+    display: flex;
+    flex-direction: column;
+}
