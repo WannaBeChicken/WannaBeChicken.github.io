@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pratham Agarwal</title>
+        <link rel="stylesheet" href="home.css">
+    </head> 
+    <body>
+    
+        <div id = nav_bar >
+            <input type="checkbox" id="toggle-nav" hidden="hidden">
+            <ul id = "nav_table">
+                <li class = "nav_list" id = "nav_home"><button class="nav-btn-home nav_list btn">Home</button></li>
+                <li class = "nav_list"><button class="nav-btn-about nav_list btn">About</button></li>
+                <li class = "nav_list"><button class="nav-btn-skills nav_list btn">Skills</button></li>
+               <li class = "nav_list"> <button class="nav-btn-projects nav_list btn">Projects</button></li>
+                <!-- <li class="nav_list">Skills</li> -->
+            </ul>
+        </div>
+
+        <div id ="cards">
+            <div id="toggle_home" >
+                <div id = "home">
+                    <h1 id = "home_heading">Hello, I'm Pratham Agarwal</h1>
+                    <p1 id = "home_content">B.Tech Computer Science Undergrad at Birla Institute of Technology Mesra </p1>
+                </div>
+            </div>
+            <div id = "toggle_about" >
+                <div id="about">
+                    <p> Myself Pratham Agarwal</p>
+                </div>
+            </div>
+            <div id = "toggle_skills">
+                <div id = "skills">
+                    <p1>Koi skills nhi h vro</p1> 
+                </div>
+            </div>
+            <div id = "toggle_projects">
+                <div id = "projects">
+                    <div id="project1">
+                        <div></div>
+                        <div id="project1_main" class="project-img">
+                            <img src="java.png" id = "project1-img"></img>
+
+                        </div>
+                        <div></div>
+                    </div>
+                    <div id="project2">
+                        <div></div>
+                        <div id="project2_main" class="project-img">
+                            <img src="nodejs.png" id = "project2-img"></img>
+                            <div class= "project-text project1-text project1-toggle" > A portfolio website made using Javascript and CSS</div>
+                        </div>
+                        <div></div>
+                        <!-- <img src="nodejs.png"></img> -->
+
+                    </div>
+                    <div id="project3">
+                        <div></div>
+                        <div id="project3_main" class="project-img">
+                            <img src="javascript.png" id = "project3-img"></img>
+                            <div class= "project-text project1-toggle">
+                                <button id="project1-git" class = "project1-text">GitHub</button>
+                                <button id="project1-link" class = "project1-text">Link</button> 
+                            </div>
+                        <div></div>
+                        <!-- <img src="javascript.png"></img> -->
+
+                        </div>
+                    <!-- <p1> Wahi bna raha hu :tears_in_my_eyes:</p1> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="home.js"></script>
+    </body>
+</html>

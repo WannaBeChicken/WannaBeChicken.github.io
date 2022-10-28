@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#nav_bar{
+    background-color: brown;
+}
+
+#nav_table{
+    list-style: none;
+    display : flex;
+    flex-direction: row;
+
+}
+.btn{
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.nav_list{
+    
+    text-align:center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    flex-basis: auto;
+    flex-grow: 2;
+    font-size: 25px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+
+#home{
+    display: grid;
+    min-height: 100vh;
+    background-color: yellow;
+
+}
+#about{
+    display: grid;
+    min-height: 100vh;
+    background-color: green;
+
+}
+#skills{
+    display: grid;
+    min-height: 100vh;
+    background-color: orange;
+}
+#projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 100vh;
+    background-color: orangered;
+}
+#toggle_home
+{
+    display : block;
+}
+#toggle_about
+{
+    display : none;
+}
+#toggle_skills
+{
+    display : none;
+}
+#toggle_projects
+{
+    display : none;
+}
+
+#project1{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#project2{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#project3{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.project-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.project-text{
+    position: absolute;
+    /* cursor: pointer; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    padding-left: 10%;
+}
+.project1-toggle{
+    display : none;
+}
+#project1-img{
+    cursor:pointer;
+}
+#project2-img{
+    cursor:pointer;
+}
+#project3-img{
+    cursor:pointer;
+}
