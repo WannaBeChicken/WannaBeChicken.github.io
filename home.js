@@ -60,8 +60,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     // console.log(document.querySelector(".project1-toggle").style.display);
-    let p1 = document.querySelector(".project-img");
-    p1.addEventListener("click",()=>{   
+    let check1=false;
+    let project1 = document.querySelector("#project1-img");
+    let project2 = document.querySelector("#project2-img");
+    let project3 = document.querySelector("#project3-img");
+    console.log(project1);
+    project1.addEventListener("click",()=>{   
         if(document.querySelector(".project1-toggle").style.display=="" ||
            document.querySelector(".project1-toggle").style.display=="none")
         {
@@ -69,10 +73,12 @@ document.addEventListener("DOMContentLoaded", function(){
             project1_toggle.forEach((element)=>{
                 element.style.display = 'block';
             });
-            document.querySelector("#project2-img").style.display = 'none';
-            document.querySelector("#project3-img").style.display = 'none';
-            document.querySelector("#project2-img").style.cursor='default';
-            document.querySelector("#project3-img").style.cursor='default';
+            project2.style.display = 'none';
+            // project2.style.pointerEvents = 'none';
+            // project3.style.pointerEvents = 'none';
+            project3.style.display = 'none';
+            project2.style.cursor='default';
+            project3.style.cursor='default';
             // document.querySelector(".project-text").style.cursor='default';
         }
         else
@@ -81,12 +87,63 @@ document.addEventListener("DOMContentLoaded", function(){
             project1_toggle.forEach((element)=>{
                 element.style.display = 'none';
             });
-            document.querySelector("#project2-img").style.display = 'block';
-            document.querySelector("#project3-img").style.display = 'block';
-
-            document.querySelector("#project2-img").style.cursor='pointer';
-            document.querySelector("#project3-img").style.cursor='pointer';
+            // project2.style.pointerEvents = 'auto';
+            // project3.style.pointerEvents = 'auto';
+            project2.style.display = 'block';
+            project3.style.display = 'block';
+            project2.style.cursor='pointer';
+            project3.style.cursor='pointer';
             // document.querySelector(".project-text").style.cursor='default';
         }
     });
+    project2.addEventListener("click",() =>{
+        if(document.querySelector(".project2-toggle").style.display=="" ||
+           document.querySelector(".project2-toggle").style.display=="none")
+           {
+                let project2_toggle = document.querySelectorAll(".project2-toggle");
+                project2_toggle.forEach((element)=>{
+                    element.style.display = 'block';
+                });
+                project1.style.display = 'none';
+                project3.style.display = 'none';
+                project1.style.cursor='default';
+                project3.style.cursor='default';
+           }
+           else
+           {
+                let project2_toggle = document.querySelectorAll(".project2-toggle");
+                project2_toggle.forEach((element)=>{
+                    element.style.display = 'none';
+                });
+                project1.style.display = 'block';
+                project3.style.display = 'block';
+                project1.style.cursor='pointer';
+                project3.style.cursor='pointer';
+            
+           }
+        })
+    project3.addEventListener("click",() =>{
+        if(document.querySelector(".project3-toggle").style.display=="" ||
+           document.querySelector(".project3-toggle").style.display=="none")
+           {
+                let project3_toggle = document.querySelectorAll(".project3-toggle");
+                project3_toggle.forEach((element)=>{
+                    element.style.display = 'block';
+                });
+                project1.style.display = 'none';
+                project2.style.display = 'none';
+                project1.style.cursor='default';
+                project2.style.cursor='default';
+           }
+           else{
+                let project3_toggle = document.querySelectorAll(".project3-toggle");
+                project3_toggle.forEach((element)=>{
+                    element.style.display = 'none';
+                });
+                project1.style.display = 'block';
+                project2.style.display = 'block';
+                project1.style.cursor='pointer';
+                project2.style.cursor='pointer';
+           }
+    })
 });

@@ -124,3 +124,10 @@
     display: flex;
     flex-direction: column;
 }
+
+.project2-toggle{
+    display : none;
+}
+.project3-toggle{
+    display : none;
+}
