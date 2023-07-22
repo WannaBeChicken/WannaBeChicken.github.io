@@ -5,89 +5,175 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Pratham Agarwal</title>
         <link rel="stylesheet" href="home.css">
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" /> -->
     </head> 
     <body>
-    
-        <div id = nav_bar >
-            <input type="checkbox" id="toggle-nav" hidden="hidden">
+        <div id = "nav_bar" class="Dark" >
             <ul id = "nav_table">
-                <li class = "nav_list" id = "nav_home"><button class="nav-btn-home nav_list btn">Home</button></li>
-                <li class = "nav_list"><button class="nav-btn-about nav_list btn">About</button></li>
-                <li class = "nav_list"><button class="nav-btn-skills nav_list btn">Skills</button></li>
-               <li class = "nav_list"> <button class="nav-btn-projects nav_list btn">Projects</button></li>
+                <li class = "nav_list" id ="nav_home"><button class="nav-btn-home nav_list btn">Home</button></li>
+                <li class = "nav_list" id="nav_about"><button class="nav-btn-about nav_list btn">About</button></li>
+                <li class = "nav_list" id="nav_skills"><button class="nav-btn-skills nav_list btn">Skills</button></li>
+                <li class = "nav_list" id="nav_projects"> <button class="nav-btn-projects nav_list btn">Projects</button></li>
+                <li class = "nav_list" id="nav_cf"> <button class="nav-btn-cf nav_list btn">Codeforces</button></li>
+                <li class = "nav_list" id="nav_dark"> <button class="nav-btn-dark nav_list btn">Dark</button></li>
                 <!-- <li class="nav_list">Skills</li> -->
             </ul>
         </div>
 
         <div id ="cards">
             <div id="toggle_home" >
-                <div id = "home">
-                    <h1 id = "home_heading">Hello, I'm Pratham Agarwal</h1>
-                    <p1 id = "home_content">B.Tech Computer Science Undergrad at Birla Institute of Technology Mesra </p1>
+                <div id = "home" class="card-display Light">
+                    <div class="home-info">
+                        <h1 id = "home_heading" class="Heading">Hello, I'm Pratham Agarwal</h1>
+                        <p1 id = "home_content">B.Tech Computer Science Undergrad at Birla Institute of Technology Mesra </p1>
+                    </div>
+                    <div class="home-img"> 
+                        <img id="home-img" src="coder.svg"></img>
+                    </div>
                 </div>
             </div>
-            <div id = "toggle_about" >
-                <div id="about">
-                    <p> Myself Pratham Agarwal</p>
+            <div id = "toggle_about" class="none" >
+                <div id="about" class="card-display Light">
+                    <div id="about-img">
+                        <img class="about-img" src="developer.svg">
+                    </div>
+                    <div id="about-info">
+                        <p id="about-heading" class="Heading">More about me..</p>
+                        <p id="about-content"> Myself Pratham Agarwal from CSE Department
+                            I'm from Jamshedpur, Jharkhand. Don't really have any hobbies. I have worked with JS,CSS,HTML,Django a few months back and right now learning DSA and trying c++.
+                            Currently a Member of IET on Campus.</p>
+                    </div>
                 </div>
             </div>
-            <div id = "toggle_skills">
-                <div id = "skills">
-                    <p1>Koi skills nhi h vro</p1> 
+            <div id = "toggle_skills" class="none">
+                <div id = "skills" class="card-display Light">
+                    <div class="skill-set">
+                        <div id="div1" class="Heading"> Skills</div>
+                            <div id="div2">
+                                <div id="div3"></div>
+                                <div class="my-skills" id="div4">
+                                    <img src="html.png" class="skill">
+                                    <img src="css.png"class="skill">
+                                    <img src="java.png" class="skill">
+                                    <img src="javascript.png" class="skill">
+                                    <img src="github.png" class="skill">
+                                    <img src="cpp.png" class="skill">
+                                    <img src="bootstrap.png" class="skill">
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
-            <div id = "toggle_projects">
-                <div id = "projects">
+            <div id = "toggle_projects" class="none">
+                <div id = "projects" class="card-display Light">
+                    <!-- ---------------------------------------Project 1 ------------------------------------------ -->
                     <div id="project1">
                         <div></div>
                         <div id="project1_main" class="project-img">
                             <img src="java.png" id = "project1-img"></img>
-                            <div class= "project-text project2-text project2-toggle"> 2nd Project text</div>
-                            <div class= "project-text project3-text project3-toggle"> 3rd Project text</div>
+                            <div class= "project-text project2-text project2-toggle"> <div>2nd Project text</div></div>
+                            <div class= "project-text project3-text project3-toggle"> <div>3rd Project text</div></div>
                         </div>
-                        <div></div>
+                        <div class="project1-nohover nohover">
+                            <div class="hover-style"><div class = "project1-hover hover none"><div>A portfolio website made using Javascript and CSS</div></div></div>
+                        </div>
                     </div>
+                    <!-- ---------------------------------------Project 2 ------------------------------------------ -->
                     <div id="project2">
-                        <div></div>
+                        <div id="project-heading"class="Heading"> Projects</div>
                         <div id="project2_main" class="project-img">
                             <img src="nodejs.png" id = "project2-img"></img>
-                            <div class= "project-text project1-text project1-toggle" > A portfolio website made using Javascript and CSS</div>
-                            <div class= "project-text project3-toggle project3-text project3-links">
-                                <div>
-                                    <button id="project3-git">GitHub</button>
-                                    <button id="project3-link">Link</button> 
+                            <div class= "project-text project1-text project1-toggle" > <div>A portfolio website made using Javascript and CSS</div></div>
+                            <div class= "project-text project3-toggle project3-links">
+                                <div class="link3">
+                                    <div id="project3-git"><button  class="button-85">GitHub</button></div>
+                                    <button id="project3-link" class="button-85">Link</button> 
                                 </div>
                             </div>
                         </div>
-                        <div></div>
+                        <div class="project2-nohover nohover"><div class="hover-style"><div class = "project2-hover none"><div>2nd Project text</div></div></div></div>
                         <!-- <img src="nodejs.png"></img> -->
 
                     </div>
+                    <!-- ---------------------------------------Project 3 ------------------------------------------ -->
                     <div id="project3">
                         <div></div>
                         <div id="project3_main" class="project-img">
                             <img src="javascript.png" id = "project3-img"></img>
-                            <div class= "project-text project1-toggle project1-text project1-links">
-                                <div>
-                                    <button id="project1-git">GitHub</button>
-                                    <button id="project1-link">Link</button> 
+                            <div class= "project-text project1-toggle project1-links">
+                                <div class="link1">
+                                    <div id="project1-git"> <button  class="button-85">GitHub</button></div>
+                                    <button id="project1-link" class="button-85">Link</button> 
                                 </div>
                             </div>
-                            <div class= "project-text project2-toggle project2-text project2-links">
-                                <div>
-                                    <button id="project2-git">GitHub</button>
-                                    <button id="project2-link">Link</button> 
+                            <div class= "project-text project2-toggle project2-links none">
+                                <div class="link2">
+                                    <div id="project2-git"><button  class="button-85">GitHub</button></div>
+                                    <button id="project2-link" class="button-85">Link</button> 
                                 </div>
                             </div>
-                        <div></div>
+                            
                         <!-- <img src="javascript.png"></img> -->
 
                         </div>
+                        <div class="project3-nohover nohover"><div class="hover-style"><div class = "project3-hover none hover"><div>3rd Project text</div></div></div></div>
                     <!-- <p1> Wahi bna raha hu :tears_in_my_eyes:</p1> -->
                     </div>
                 </div>
             </div>
+            <div id = "toggle_cf" class="none">
+                <div id="cf" class="card-display Light">
+                    <div id="cp-info">
+                        <div class="cp-site">
+                            <div id="cf-text-area">
+                                <div class="cf-details">Name :<p id="codeforces-name"></p></div>
+                                <div class="cf-details">Handle :<p id="codeforces-handle"></p></div>
+                                <div class="cf-details">Rating :<p id="codeforces-rating"></p></div>
+                                <div class="cf-details">Rank :<p id="codeforces-rank"></p></div>
+                            </div>
+                           
+                        </div>
+                        
+                        <div id="cf-logo">
+                            <div class="Heading">CF Stats</div>
+                            <img src="Codeforces_logo.png">
+                        </div>
+                    </div>
+                    <form method="get" id="cf-details" >
+                        <input type="text" id="cf-handle">
+                        <!-- <input type="submit" id="cf-submit"> -->
+                        <div id="cp-submit"> <input type="submit" id="cp-submit"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="margin-top-bottom">
+                    <p class="footer-text-segment1">Social Media Handles</p>
+     
+                    <div class="footer">
+                        <a target="_blank" href="https://www.linkedin.com/in/pratham-agarwal-9a4505223/">
+                            <img class="round-img-net" id="LinkedIn-img" src="linked.png">
+                        </a>
+                        <a target="_blank" href="https://github.com/WannaBeChicken/">
+                            <img class="round-img-net" id="github-img" src="github.jpg">
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/pratham.agarwal.169/">
+                            <img class="round-img-net" id="insta-img" src="instaBlack.jpg" >
+                        </a>
+                    </div>
+                    <p class="footer-text-segment1">
+                        Created By Pratham Agarwal using pure HTML-CSS, 
+                        Javascript and some Libraries
+                    </p>
+                    <p class="footer-text-segment1">
+                        <a target="_blank" class="text-xs" id="mymail"
+                            href="mailto:prathamdavbistupur@gmail.com">prathamdavbistupur@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+     
         </div>
         <script src="home.js"></script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script> -->
     </body>
 </html>
