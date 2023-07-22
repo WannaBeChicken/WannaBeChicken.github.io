@@ -6,24 +6,25 @@ document.addEventListener("DOMContentLoaded", function(){
     let projects = document.querySelector(".nav-btn-projects");
     let cf = document.querySelector(".nav-btn-cf");
     let dark = document.querySelector(".nav-btn-dark");
-    // console.log(localStorage.getItem("current"));
-    if(localStorage.getItem("current")=="")
+    // localStorage.setItem("current","");
+    console.log(localStorage.getItem("current"));
+    if(localStorage.getItem("current")==="" || localStorage.getItem("username") === null)
     {
         load_home();
     }
-    if(localStorage.getItem("current")=="about")
+    if(localStorage.getItem("current")==="about")
     {
         load_about();
     }
-    if(localStorage.getItem("current")=="skills")
+    if(localStorage.getItem("current")==="skills")
     {
         load_skills();
     }
-    if(localStorage.getItem("current")=="projects")
+    if(localStorage.getItem("current")==="projects")
     {
         load_projects();
     }
-    if(localStorage.getItem("current")=="cf")
+    if(localStorage.getItem("current")==="cf")
     {
         load_cf();
     }
@@ -114,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // console.log(document.querySelector(".project1-toggle").style.display);
     let project1 = document.querySelector("#project1-img");
-    console.log(project1);
     let project2 = document.querySelector("#project2-img");
     let project3 = document.querySelector("#project3-img");
     let clicked = false;
@@ -197,21 +197,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     document.querySelector("#cp-submit").addEventListener("click", event =>{
-        // event.preventDefault();
+        event.preventDefault();
+        // console.log(event);
         let cpHandle = document.querySelector("#cf-handle").value;
-        // window.location.href = ("https://codeforces.com/profile/"+cpHandle);
-        console.log(event);
         // console.log(ccHandle)
             fetch('https://codeforces.com/api/user.info?handles='+cpHandle)
             .then((response) => response.json())
             .then((data) => 
             {
-                console.log(data);
                 document.querySelector("#codeforces-rating").innerHTML=data.result[0].rating;
                 document.querySelector("#codeforces-rank").innerHTML=data.result[0].rank;
                 document.querySelector("#codeforces-handle").innerHTML=data.result[0].handle;
                 document.querySelector("#codeforces-name").innerHTML=data.result[0].firstName+" "+data.result[0].lastName;
-                // console.log(data.result[1] );
+                console.log(data);
             });
     })
 });

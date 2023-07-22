@@ -6,17 +6,16 @@
     /* color: black; */
 }
 .Light{
-    /* background-image: linear-gradient(to right, #F5F7FA , #B8C6DB); */
-    background-image: linear-gradient(to right top, #d16ba5, #b17dc8, #8390dc, #4c9fde, #19a9d0, #19b2cd, #2dbbc8, #46c3c1, #4cd1cd, #52dfd9, #58ede5, #5ffbf1);
-    /* background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-image: linear-gradient(to right, #F5F7FA , #B8C6DB);
+    
 }
 .Dark{
-    /* background-image: linear-gradient(to right, #04619F , #000000); */
-    background-image: linear-gradient(to right top, #050104, #190117, #210326, #260339, #26024e, #3e025a, #560164, #6e006e, #9b0065, #c10052, #dd0035, #eb0000);}
+    background-image: linear-gradient(to right, #04619F , #000000);
+    
+}
 .Heading{
-    /* font : inherit; */
     font-size:50px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     line-height: 1.6;
     word-spacing: 7px;
     /* color:white; */
