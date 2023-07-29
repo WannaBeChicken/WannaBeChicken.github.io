@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let cf = document.querySelector(".nav-btn-cf");
     let dark = document.querySelector(".nav-btn-dark");
     // localStorage.setItem("current","");
-    console.log(localStorage.getItem("current"));
-    if(localStorage.getItem("current")==="" || localStorage.getItem("username") === null)
+    // console.log(localStorage.getItem("current"));
+    if(localStorage.getItem("current")==="" || localStorage.getItem("current") === null)
     {
         load_home();
     }

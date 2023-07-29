@@ -333,6 +333,10 @@
     flex-shrink: 1;
     flex-grow: 1;
     transition: box-shadow .2s;
+    width:500px;
+    height:252px;
+    padding-left: 5em;
+    padding-top: 3em;
 }
 
 .project-text{
@@ -351,6 +355,8 @@
     animation-duration: .5s;
     transition: box-shadow .2s;
     border-radius: 25px;
+    width:500px;
+    height:252px;
 }
 
 
